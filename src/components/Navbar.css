@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar container */
+.navbar {
+    background-color: #333;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Casino logo or heading */
+.navbar h1 {
+    color: white;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+/* Navbar links container */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Individual nav link styles */
+.nav-links li {
+    display: inline;
+}
+
+/* Links styling */
+.nav-links .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links .nav-link:hover {
+    color: #007bff; /* Highlight color on hover */
+}
+
+/* Button styling */
+.nav-links button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.nav-links button:hover {
+    color: #dc3545; /* Change to red on hover for logout */
+}
+
+/* Login button styling */
+.nav-links .login-btn {
+    background-color: #28a745;
+    padding: 8px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links .login-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.nav-links .login-btn:active {
+    background-color: #1e7e34;
+}
+
+.navbar.disabled {
+    pointer-events: none; /* Disable all interactions */
+    opacity: 0.5; /* Optional: Make it look inactive */
+}
+
+.disabled-link {
+    pointer-events: none;
+    color: gray; /* Optional: Change color to indicate it's disabled */
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-links .nav-link {
+        font-size: 1.2rem;
+    }
+
+    .nav-links .login-btn {
+        font-size: 1.2rem;
+        padding: 8px 20px;
+    }
+}

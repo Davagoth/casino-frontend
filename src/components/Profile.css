@@ -1,0 +1,89 @@
+.profile {
+    background: linear-gradient(to bottom right, #ffffff, #e8eaf6);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.profile h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #3f51b5;
+    margin-bottom: 30px;
+}
+
+.profile-details {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.profile-details p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.add-funds, .pay-back-funds, .game-history {
+    max-width: 700px; /* Increased max-width for the sections */
+    margin: 20px auto;
+}
+
+.add-funds h3, .pay-back-funds h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #3f51b5;
+}
+
+.funds-input {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Ensures consistent spacing between elements */
+}
+
+.funds-input input {
+    flex: 2; /* Adjusted to make the input fields wider */
+    max-width: 500px; /* Added a maximum width for responsiveness */
+    padding: 12px; /* Slightly larger padding for better appearance */
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.funds-input button {
+    flex: 1; /* Adjusted to make buttons proportional */
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem; /* Ensures button text is appropriately sized */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.funds-input button:hover {
+    background: #45a049;
+}
+
+.game-categories {
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-category {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.game-category button {
+    margin-bottom: 10px;
+}
+
+.game-category ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.game-category li {
+    margin-bottom: 5px;
+}
+

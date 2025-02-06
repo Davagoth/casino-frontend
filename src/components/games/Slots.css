@@ -1,0 +1,168 @@
+/* Slots Container */
+.slots {
+    background: linear-gradient(to bottom, rgba(58, 58, 58, 0.8), rgba(26, 26, 26, 0.9)),
+    url('https://img.freepik.com/premium-vector/casino-neon-collection-icons-slot-sign-set-night-vegas_3482-1865.jpg?w=826');
+    color: #ff6f00;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-size: cover;
+    background-blend-mode: overlay;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.6);
+}
+
+/* Title */
+.slots h1 {
+    color: #f7f702;
+    text-shadow: 3px 3px 12px rgba(255, 255, 255, 0.9);
+}
+
+/* Instructions */
+.instruction {
+    font-size: 20px;
+    color: #ffffff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    margin-bottom: 20px;
+}
+
+/* Balance */
+.balance {
+    font-size: 22px;
+    color: #ffffff;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Bet Section */
+.bet-section {
+    margin: 20px 0;
+}
+
+.bet-section input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.bet-section button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bet-section button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* Reels Grid */
+.reels {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    flex-direction: column; /* Stack the rows vertically */
+}
+
+.reel-row {
+    display: flex; /* Layout symbols horizontally */
+    justify-content: center;
+}
+
+.reel {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 50px;
+    margin: 0 5px;
+    background: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.reel:hover {
+    transform: scale(1.1);
+    background-color: #f2f2f2;
+}
+
+
+/* Animation for Spinning */
+.reels.spinning .reel {
+    animation: spin 1.5s infinite ease-in-out;
+}
+
+/* Chosen vs Not Chosen */
+.reel.chosen {
+    background-color: #f2f2f2;
+}
+
+.reel.not-chosen {
+    background-color: #ffffff;
+    opacity: 0.7;
+}
+
+/* Messages */
+.message {
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 1);
+    margin-top: 20px;
+}
+
+/* For matching two symbols */
+.message.win {
+    color: green;
+    background-color: #d4edda;
+}
+
+/* For losing */
+.message.lose {
+    color: red;
+    background-color: #f8d7da;
+}
+
+/* For jackpot */
+.message.jackpot {
+    color: yellow;
+    background-color: #fff3cd;
+}
+
+/* For warning */
+.message.warning {
+    color: darkorange;
+    background-color: white;
+}
+
+/* Spinning Animation */
+@keyframes spin {
+    0% {
+        transform: rotateX(0deg);
+    }
+    25% {
+        transform: rotateX(180deg);
+    }
+    50% {
+        transform: rotateX(360deg);
+    }
+    75% {
+        transform: rotateX(540deg);
+    }
+    100% {
+        transform: rotateX(720deg);
+    }
+}

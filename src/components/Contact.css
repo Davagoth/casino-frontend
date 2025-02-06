@@ -1,0 +1,104 @@
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main container */
+.contact {
+    max-width: 700px;
+    min-height: 100vh;
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(to bottom, #fafafa, #e3f2fd);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Heading and description */
+.contact h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Form container */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Labels */
+.contact label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input, Select, and Textarea styling */
+.contact input,
+.contact select,
+.contact textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+/* Focus effect on input fields */
+.contact input:focus,
+.contact select:focus,
+.contact textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Submit button styling */
+.contact button {
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect on submit button */
+.contact button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .contact {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .contact h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact p {
+        font-size: 1rem;
+    }
+
+    .contact button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}

@@ -1,0 +1,13 @@
+.home {
+    background: linear-gradient(to top, #e0f7fa, #80deea);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 3rem;
+    color: #004d40;
+}

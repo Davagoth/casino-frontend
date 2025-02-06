@@ -1,0 +1,140 @@
+/* Roulette Container */
+.roulette {
+    background: radial-gradient(circle, rgba(42, 46, 42, 0.8), rgba(18, 51, 18, 0.9)),
+    url('https://img.freepik.com/free-photo/view-roulette-casino_23-2151007772.jpg?t=st=1735932354~exp=1735935954~hmac=f34289469d82a384617998893240a3dfe3a84d22623f2bb1a548c992c24e072a&w=826');
+    color: #fff;
+    font-family: "Verdana", sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+/* Styl dla przycisku Spin, gdy jest niedostępny */
+button.disabled {
+    background-color: #b0b0b0; /* Szary kolor tła */
+    border: 1px solid #8f8f8f; /* Szary kolor ramki */
+    cursor: not-allowed; /* Zmienia kursor na "zakazany" */
+    color: #ffffff; /* Biały tekst */
+}
+
+/* Wyłączenie efektu hover dla zablokowanego przycisku */
+button.disabled:hover {
+    background-color: #b0b0b0; /* Utrzymujemy szary kolor tła */
+    cursor: not-allowed; /* Kursor pozostaje zakazany */
+}
+
+/* Message Styles */
+.message {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid white; /* Biała ramka */
+    background-color: rgba(0, 0, 0, 0.6); /* Półprzezroczyste tło dla lepszej widoczności */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Subtelna poświata wokół tekstu */
+    color: #fff; /* Biały tekst dla lepszej widoczności */
+    text-align: center;
+}
+
+/* Dodatkowe style dla sukcesu i błędu */
+.message.success {
+    color: green;
+}
+
+.message.error {
+    color: red;
+}
+
+
+.message.warning {
+    background-color: yellow;
+    color: white;
+    border: 2px solid black;
+}
+
+
+/* Wheel Container */
+.wheel-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+/* Wheel */
+.wheel {
+    position: relative;
+    width: 350px; /* Powiększone koło */
+    height: 350px; /* Powiększone koło */
+    border-radius: 50%;
+    border: 5px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    overflow: hidden;
+}
+
+/* Numery koła */
+.wheel-number {
+    position: absolute;
+    width: 30px; /* Powiększone numery */
+    height: 30px; /* Powiększone numery */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px; /* Powiększony tekst */
+    font-weight: bold;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    transform-origin: center center;  /* Zapewnienie poprawnego obrotu */
+}
+
+/* Kolorowanie numerów */
+.wheel-number.red {
+    background-color: #ff4d4d;
+    color: #fff;
+}
+
+.wheel-number.black {
+    background-color: #333;
+    color: #fff;
+}
+
+.wheel-number.green {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+/* Wheel Pointer */
+.wheel-pointer {
+    position: absolute;
+    top: 30%; /* Pozycjonowanie względem środka koła */
+    left: 50%; /* Pozycjonowanie względem środka koła */
+    width: 6px;
+    height: 160px; /* Długość wskazówki */
+    background-color: red;
+    border-radius: 5px;
+    transform-origin: center top; /* Punkt obrotu na górze wskaźnika */
+    transform: translate(-50%, -50%); /* Przesunięcie środka wskaźnika do środka koła */
+    z-index: 10;
+}
+
+
+/* Animacja */
+@keyframes spinAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1080deg); /* 3 pełne obroty */
+    }
+}
+
+.wheel-pointer.spin {
+    animation: spin 3s ease-in-out;
+}
